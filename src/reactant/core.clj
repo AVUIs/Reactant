@@ -4,7 +4,7 @@
             [reactant.dynamic :as dynamic]))
 
 (q/defsketch reactant
-  :title "You spin my circle right round"
+  :title "You spin me right round baby"
   :size [500 500]
   ; setup function called only once, during sketch initialization.
   :setup dynamic/setup
