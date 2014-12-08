@@ -1,4 +1,4 @@
-(ns substrate.dynamic
+(ns reactant.dynamic
   (:require [quil.core :as q]
             [quil.applet :as applet]
             [quil.middleware :as m])

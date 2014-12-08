@@ -1,9 +1,9 @@
-(ns substrate.core
+(ns reactant.core
   (:require [quil.core :as q]
             [quil.middleware :as m]
-            [substrate.dynamic :as dynamic]))
+            [reactant.dynamic :as dynamic]))
 
-(q/defsketch substrate-quil
+(q/defsketch reactant
   :title "You spin my circle right round"
   :size [500 500]
   ; setup function called only once, during sketch initialization.
