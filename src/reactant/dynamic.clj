@@ -1,32 +1,13 @@
 (ns reactant.dynamic
   (:require [quil.core :as q]
             [quil.applet :as applet]
-            [quil.middleware :as m])
-  (:import [ddf.minim Minim]
-           [ddf.minim AudioOutput]
-           [ddf.minim.signals SineWave]))
-
-(def ^:dynamic *minim* (atom nil))
-(def ^:dynamic *outp*  (atom nil))
-(def ^:dynamic *sine*  (atom nil))
+            [quil.middleware :as m]))
 
 (defn setup []
   ; Set frame rate to 30 frames per second.
   (q/frame-rate 30)
   ; Set color mode to HSB (HSV) instead of default RGB.
   (q/color-mode :hsb)
-
-  (swap! *minim* (fn [minim] (Minim. (applet/current-applet))))
-  (swap! *outp*  (fn [out] (.getLineOut @*minim*)))
-  (swap! *sine*  (fn [out] (new SineWave 440 1 (.sampleRate @*outp*))))
-
-  ;; I want something like this, but I don't know how to make it work
-  ;; Everything I try ends up with the famous and much loved
-  ;; java.lang.NullPointerException.
-  ;;
-  ;; Bah.
-  ;
-  ; (.patch *sine* *outp*)
 
   ; setup function returns initial state. It contains
   ; circle color and position.
@@ -43,6 +24,7 @@
   (q/background 240)
   ; Set circle color.
   (q/fill (:color state) 255 255)
+  ; (q/stroke (:color state) 255 255)
   ; Calculate x and y coordinates of the circle.
   (let [angle (:angle state)
         x (* 150 (q/cos angle))
