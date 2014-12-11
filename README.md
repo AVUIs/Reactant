@@ -13,7 +13,11 @@ I hope you like the terminal.
 4. Load Reactant. `(use 'reactant.core)`
 5. Play.
 
-Even better, maybe you like emacs.
+### Editor integration
+
+#### Emacs
+
+Maybe you like emacs.
 
 1. Install Leiningen as above.
 2. Configure Leiningen if you haven't done so yet:
@@ -31,7 +35,8 @@ Even better, maybe you like emacs.
 Now the fun bit.
 
 1. Open in emacs Reactant's `core.clj`
-2. Ask cider to start the Leiningen Repl server and connect to it: `M-x cider-jack-in`
+2. Ask cider to start the Leiningen Repl server and connect to it:
+   `M-x cider-jack-in`
 3. Wait a bit until you see an inspirational quote.
 4. Hit `C-c C-c`... wow!
 5. Open Reactant's `dynamic.clj`
@@ -39,6 +44,31 @@ Now the fun bit.
 7. Play.
 
 [^1]: currently "x.y.z" is "0.8.2-SNAPSHOT"
+
+#### Vim
+
+Maybe you like vim.
+
+1. Install Leiningen as above.
+2. Add the [CIDER nREPL](https://github.com/clojure-emacs/cider-nrepl) plugin
+   to your `~/.lein/profile.clj`.
+3. Install [tpope's fireplace](https://github.com/tpope/vim-fireplace) vim
+   plugin. If you don't have a favourite package manager, I recommend
+   [gmarik's Vundle](https://github.com/gmarik/Vundle.vim).
+4. Open the project directory in two terminals.
+5. Install the leiningen dependencies. `lein deps`
+6. Run Leiningen's Read Eval Print Loop. `lein repl`
+
+Now the fun bit.
+
+1. Open vim in the other terminal.
+2. Open `src/reactant/core.clj`.
+3. Run `:Require`... Magic!
+4. Open `src/reactant/dynamic.clj`
+5. Change something in `draw`, run `:Require`... Cool, huh?
+6. Play.
+
+I recommend mapping `:Require` to something. I like `<leader>r`.
 
 ## Dynamic Workflow
 
