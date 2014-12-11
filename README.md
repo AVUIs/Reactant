@@ -74,3 +74,10 @@ Now the fun bit.
 6. Play.
 
 I recommend mapping `:Require` to something. I like `<leader>r`.
+
+#### Sublime Text
+
+Maybe you like Sublime Text
+
+1. Consider installing Emacs
+2. Consider installing Vim
