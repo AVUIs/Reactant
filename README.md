@@ -18,7 +18,7 @@ Even better, maybe you like emacs.
 1. Install Leiningen as above.
 2. Configure Leiningen if you haven't done so yet:
    1. Make sure your `~/.lein/profile.clj` has at least:
-	  `{:user {:plugins [[cider/cider-nrepl "x.y.z"]]}}`[^1]
+	   `{:user {:plugins [[cider/cider-nrepl "x.y.z"]]}}`[^1]
    2. Navigate to this directory in the terminal. `cd /path/to/this/dir/`
    3. Ask Leiningen to install the dependencies. `lein deps`
 3. Configure emacs if you haven't done so yet:
@@ -38,7 +38,7 @@ Now the fun bit.
 6. Change something in `update` or `draw`, hit `C-c C-c` ... wow!
 7. Play.
 
-[^1]: currently, "x.y.z" is "0.8.2-SNAPSHOT"
+[^1]: currently "x.y.z" is "0.8.2-SNAPSHOT"
 
 ## Dynamic Workflow
 
