@@ -13,6 +13,11 @@ I hope you like the terminal.
 4. Load Reactant. `(use 'reactant.core)`
 5. Play.
 
+You can [reload namespaces][dynamic] to modify the application while running.
+i.e. `(use :reload 'reactant.dynamic)`
+
+[dynamic]: https://github.com/quil/quil/wiki/Dynamic-Workflow-(for-REPL)
+
 ### Editor integration
 
 #### Emacs
@@ -69,10 +74,3 @@ Now the fun bit.
 6. Play.
 
 I recommend mapping `:Require` to something. I like `<leader>r`.
-
-## Dynamic Workflow
-
-https://github.com/quil/quil/wiki/Dynamic-Workflow-(for-REPL)
-
-    (use 'reactant.core)
-    (use :reload 'reactant.dynamic)
