@@ -26,7 +26,7 @@
       ; Right  of box A is right of left   of box B
       ; Top    of box A is above    bottom of box B
       ; Bottom of box A is below    top    of box B
-      (< a-left b-right)
-      (> a-right b-left)
-      (< a-top b-bottom)
+      (< a-left   b-right)
+      (> a-right  b-left)
+      (< a-top    b-bottom)
       (> a-bottom b-top))))
