@@ -19,4 +19,12 @@
                                [[0 0] [1 1]])
       "Same line where first co-ord in second pair is lower and righter"))
 
+
+(deftest bounding-boxes-overlap?-with-no-overlap
+  (is (not (bounding-boxes-overlap? [[0 0] [1 1]]
+                                    [[2 2] [3 2]])))
+
+  (is (not (bounding-boxes-overlap? [[-3 0] [1 1]]
+                                    [[2  3] [1 2]]))))
+
 (run-tests)
