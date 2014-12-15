@@ -30,3 +30,9 @@
       (> a-right  b-left)
       (< a-top    b-bottom)
       (> a-bottom b-top))))
+
+
+(defn cross-product
+  "Cross product of two points"
+  [[a-x a-y] [b-x b-y]]
+  (- (* a-x b-y) (* a-y b-x)))

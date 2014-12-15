@@ -2,6 +2,8 @@
   (:use clojure.test
         reactant.geometry))
 
+; Bounding boxes
+
 (deftest bounding-boxes-overlap?-with-same-segment
   (is (bounding-boxes-overlap? [[0 0] [1 1]]
                                [[0 0] [1 1]])
@@ -29,5 +31,13 @@
 
   (is (not (bounding-boxes-overlap? [[-3 0] [1 1]]
                                     [[2  3] [1 2]]))))
+
+; Cross product
+
+(deftest cross-product-test
+    (is (=  0 (cross-product [1 1]  [1 1])))
+    (is (=  0 (cross-product [10 2] [20 4])))
+    (is (= 46 (cross-product [4 5]  [2 14])))
+    (is (= 2179 (cross-product [24 5] [1 91]))))
 
 (run-tests)
