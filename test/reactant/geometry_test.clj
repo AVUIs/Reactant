@@ -24,6 +24,9 @@
   (is (not (bounding-boxes-overlap? [[0 0] [1 1]]
                                     [[2 2] [3 2]])))
 
+  (is (not (bounding-boxes-overlap? [[8 8] [2 1]]
+                                    [[9 1] [6 1]])))
+
   (is (not (bounding-boxes-overlap? [[-3 0] [1 1]]
                                     [[2  3] [1 2]]))))
 
